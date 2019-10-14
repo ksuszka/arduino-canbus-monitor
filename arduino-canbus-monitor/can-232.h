@@ -100,6 +100,7 @@
 //#define LW232_IS_OK(x) ((x)==LW232_OK ||(x)==LW232_OK_NEW ? TRUE : FALSE)
 
 #define LW232_CR    '\r'
+#define LW232_LF    '\n'
 #define LW232_ALL   'A'
 #define LW232_FLAG  'F'
 #define LW232_TR11  't'
@@ -107,6 +108,8 @@
 
 #define LW232_RET_ASCII_OK             0x0D
 #define LW232_RET_ASCII_ERROR          0x07
+//#define LW232_RET_ASCII_OK             "ok\r\n"
+//#define LW232_RET_ASCII_ERROR          "error\r\n"
 #define LW232_RET_ASCII_OK_SMALL       'z'
 #define LW232_RET_ASCII_OK_BIG         'Z'
 

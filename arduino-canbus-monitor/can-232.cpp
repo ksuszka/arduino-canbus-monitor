@@ -15,7 +15,7 @@
 #include "mcp_can.h"
 #include "can-232.h"
 
-#define LOGGING_ENABLED
+//#define LOGGING_ENABLED
 
 #ifdef LOGGING_ENABLED
 #define dbg_begin(x) debug.begin(x)
@@ -115,7 +115,7 @@ void Can232::serialEventFunc() {
     while (Serial.available()) {
         char inChar = (char)Serial.read();
         inputString += inChar;
-        if (inChar == LW232_CR) {
+        if (inChar == LW232_CR || inChar == LW232_LF) {
             stringComplete = true;
         }
     }
